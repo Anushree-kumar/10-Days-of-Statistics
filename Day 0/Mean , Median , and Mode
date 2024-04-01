@@ -1,1 +1,61 @@
+/**
+ * This Java program calculates the mean, median, and mode of a given set of integers.
+ * It reads the input from standard input (STDIN) and prints the calculated statistics to standard output (STDOUT).
+ *
+ * The program prompts the user to enter the number of elements followed by the elements themselves.
+ * It then calculates and prints the mean, median, and mode of the input elements.
+ * Mean: The average value of the input elements.
+ * Median: The middle value of the sorted input elements.
+ * Mode: The most frequently occurring value in the input elements.
+ */
+
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        // Read input from standard input
+        Scanner sc = new Scanner(System.in);
+        
+        // Read the number of elements
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        int sum = 0;
+        
+        // Read the elements and calculate sum
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+            sum += arr[i];
+        }
+        
+        // Calculate and print the mean
+        System.out.println((double) sum / n); // Mean
+        
+        // Sort the array
+        Arrays.sort(arr);
+        int md = arr.length / 2;
+        
+        // Calculate and print the median
+        System.out.println((arr[md] + arr[md - 1]) / 2.0);
+        
+        // Find the mode
+        int Value = arr[0];
+        int maxCount = 1;
+
+        for (int i = 0; i < n; ++i) {
+            int count = 1;
+            for (int j = i + 1; j < n; ++j)
+                if (arr[j] == arr[i]) ++count;
+
+            if (count > maxCount) {
+                maxCount = count;
+                Value = arr[i];
+            }
+        }
+
+        // Print the mode
+        System.out.println(Value);
+    }
+}
+
 
