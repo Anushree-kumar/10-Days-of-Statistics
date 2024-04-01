@@ -1,0 +1,43 @@
+/**
+ * This Java program calculates the weighted mean of a given set of elements and their corresponding weights.
+ * It reads the input from standard input (STDIN) and prints the calculated weighted mean to standard output (STDOUT).
+ *
+ * Weighted mean is calculated as the sum of the products of each element and its corresponding weight,
+ * divided by the sum of the weights.
+ 
+ */
+
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+      
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt(); // Number of elements
+        int [] x_arr = new int[n]; // Array to store X
+        int [] w_arr = new int[n]; // Array to store W
+        
+        // Reading elements
+        for (int i = 0; i < n; i++) {
+            x_arr[i] = scan.nextInt();
+        }
+        
+        // Reading weights
+        for (int i = 0; i < n; i++) {
+            w_arr[i] = scan.nextInt();
+        }
+        scan.close();
+        
+        // Calculate the total sum of products and total sum of weights
+        int sum = 0;
+        int sum_weights = 0;
+        for (int i = 0; i < n; i++) {
+            sum += x_arr[i] * w_arr[i];
+            sum_weights += w_arr[i];
+        }
+        
+        // Calculate the weighted mean
+        double weighted_Mean = (double) sum / sum_weights;
+        System.out.format("%.1f", weighted_Mean); // Print the result
+    }
+}
