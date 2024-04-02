@@ -1,0 +1,47 @@
+/**
+ * This Java program calculates the quartiles (Q1, Q2, and Q3) of a given set of integers.
+ * It reads the input from standard input (STDIN) and prints the quartiles to standard output (STDOUT).
+ * Quartiles divide a dataset into four equal parts: Q1 is the median of the lower half, Q2 is the median of the entire dataset,
+ * and Q3 is the median of the upper half.
+ *
+ */
+
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt(); // Number of elements in the array
+        int [] array = new int[n]; // Array to store the elements
+        
+        // Reading the elements
+        for (int i = 0; i < n; i++) {
+            array[i] = scan.nextInt();
+        }
+        
+        // Sorting the array
+        Arrays.sort(array);
+        
+        // Calculating quartiles
+        int q1 = Median(array, 0, n / 2 - 1); // Q1
+        int q2 = Median(array, 0, n - 1); // Q2 (Median)
+        int q3 = Median(array, (n + 1) / 2, n - 1); // Q3
+        
+        // Printing quartiles
+        System.out.println(q1);
+        System.out.println(q2);
+        System.out.println(q3);
+        
+        scan.close();
+    }
+
+    // Method to calculate median
+    private static int Median(int [] array, int start, int end) {
+        if ((end - start) % 2 == 0) {
+            return array[(end + start) / 2];
+        } else {
+            return Math.round((array[(end + start) / 2] + array[(end + start) / 2 + 1]) / 2.0f);
+        }
+    }
+}
