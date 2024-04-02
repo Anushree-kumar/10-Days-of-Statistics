@@ -1,0 +1,58 @@
+/**
+ * This program calculates the interquartile range (IQR) of a dataset given its values and frequencies.
+ * The interquartile range is a measure of statistical dispersion, representing the difference between the third quartile (Q3)
+ * and the first quartile (Q1) of the dataset.
+ *
+ * It then calculates the interquartile range and prints the result to standard output (STDOUT).
+ * 
+ * This implementation uses an auxiliary array to create a sorted dataset and then calculates the median
+ * to find Q1 and Q3, enabling the calculation of the interquartile range.
+ *
+ */
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class Solution {
+    public static void main(String[] args) {
+        /* Save input */
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt(); // Size of dataset
+        int[] val = new int[n]; // Array to store values
+        int[] freq = new int[n]; // Array to store frequencies
+        
+        // Read values and frequencies
+        for (int i = 0; i < n; i++) {
+            val[i] = scan.nextInt(); // Read value
+        }
+        int tot_el = 0;
+        for (int i = 0; i < n; i++) {
+            freq[i] = scan.nextInt(); // Read frequency
+            tot_el += freq[i]; // Calculate total number of elements
+        }
+        scan.close();
+        
+        /* Create and sort our data set */
+        int[] data = new int[tot_el]; // Auxiliary array to store sorted dataset
+        int index = 0; // Index to keep track of current position in data array
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < freq[i]; j++) {
+                data[index++] = val[i]; // Add value to data array based on its frequency
+            }
+        }
+        Arrays.sort(data); // Sort the dataset
+        
+        /* Calculate interquartile range */
+        double q1 = Median(data, 0, data.length / 2 - 1); // Q1
+        double q3 = Median(data, (data.length + 1) / 2, data.length - 1); // Q3
+        System.out.println(q3 - q1); // Print interquartile range
+    }
+    
+    /* Treats elements from "start" to "end" (inclusive) as an array and calculates its median */
+     private static int Median(int [] array, int start, int end) {
+        if ((end - start) % 2 == 0) {
+            return array[(end + start) / 2];
+        } else {
+            return Math.round((array[(end + start) / 2] + array[(end + start) / 2 + 1]) / 2.0f);
+        }
+    }
+}
