@@ -1,0 +1,42 @@
+/**
+ * This program calculates the standard deviation of a given set of integers.
+ * Standard deviation measures the amount of variation or dispersion in a set of values.
+ *
+ * It then calculates the standard deviation and prints the result to standard output (STDOUT).
+ * 
+ */
+
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        /* Save input */
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt(); // Number of integers
+        int[] arr = new int[n]; // Array to store integers
+        int sum = 0; // Variable to store the sum of integers
+        
+        // Read integers and calculate sum
+        for (int i = 0; i < n; i++) {
+            arr[i] = scan.nextInt();
+            sum += arr[i];
+        }
+        scan.close();
+
+        // Calculate mean
+        double mean = (double) sum / n;
+        
+        // Calculate sum of squares
+        double sum_squares = 0;
+        for (int i = 0; i < n; i++) {
+            sum_squares += Math.pow(arr[i] - mean, 2);
+        }
+        
+        // Calculate variance and standard deviation
+        double variance = sum_squares / n;
+        double std = Math.sqrt(variance);
+
+        // Print standard deviation
+        System.out.format("%.1f", std);
+    }
+}
