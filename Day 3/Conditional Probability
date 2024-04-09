@@ -21,9 +21,6 @@ We are interested in the probability that both children are boys, which correspo
 The probability of scenario 1 (BB) occurring among the remaining scenarios (BB, BG, GB) can be calculated as follows:
 Probability of BB= Number of favorable outcomes (BB)/Total remaining outcomes (BB, BG, GB)
 
-​
-
-
 ## Answer
 By considering the remaining possible scenarios after knowing one child is a boy, the probability that both children are boys is 1/3.
 
