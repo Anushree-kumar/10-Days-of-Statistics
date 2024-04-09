@@ -1,0 +1,33 @@
+
+
+## Problem Statement
+In a single toss of 2 fair (evenly-weighted) six-sided dice, find the probability that the values rolled by each die will be different and the two dice have a sum of 6.
+1. 1 / 9
+2. 1 / 6
+3. 2 / 3
+4. 5 / 6
+
+## Solution Approach
+To solve this problem, we need to find the combinations of outcomes where:
+1. The values rolled by each die are different.
+2. The sum of the values on the two dice is 6.
+
+## Total Possible Outcomes
+Each die has six sides, so the total number of outcomes when tossing two dice is 6*6=36.
+
+## Favorable Outcomes
+We need to find the combinations of outcomes where the values on the two dice are different and the sum is 6. These combinations are:
+- (1, 5)
+- (2, 4)
+- (4, 2)
+- (5, 1)
+
+There are 4 favorable outcomes.
+
+## Probability Calculation
+The probability of getting a sum of 6 with different values on each die is the ratio of favorable outcomes to total outcomes:
+Number of Favorable Outcomes/Total Number of Outcomes= 4/36 = 1/9
+
+## Answer
+The probability that the values rolled by each die will be different and the two dice have a sum of 6 is 1/9.
+
