@@ -1,0 +1,41 @@
+
+
+## Problem Statement
+There are three urns labeled X, Y, and Z.
+- Urn X contains 4 red balls and 3 black balls.
+- Urn Y contains 5 red balls and 4 black balls.
+- Urn Z contains 4 red balls and 4 black balls.
+
+One ball is drawn from each of the 3 urns. What is the probability that, out of the 3 balls drawn, 2 are red and 1 is black?
+
+## Solution Approach
+To solve this problem, we need to find the probability of drawing 2 red balls and 1 black ball from the three urns.
+
+## Total Possible Outcomes
+The total number of possible outcomes can be calculated by multiplying the number of balls in each urn:
+- Urn X: 7 balls
+- Urn Y: 9 balls
+- Urn Z: 8 balls
+
+So, the total number of possible outcomes is 7*9*8=504.
+
+## Favorable Outcomes
+We need to find the combinations of outcomes where exactly 2 red balls and 1 black ball are drawn. This can happen in the following ways:
+1. Red from X, Red from Y, Black from Z
+2. Red from X, Black from Y, Red from Z
+3. Black from X, Red from Y, Red from Z
+
+We calculate the number of favorable outcomes for each case:
+1. 4 * 5 * 4 = 80 (Red from X, Red from Y, Black from Z)
+2. 4 * 4 * 4 = 64 (Red from X, Black from Y, Red from Z)
+3. 3 * 5 * 4 = 60 (Black from X, Red from Y, Red from Z)
+
+So, the total number of favorable outcomes is 80 + 64 + 60 = 204.
+
+## Probability Calculation
+The probability of drawing 2 red balls and 1 black ball is the ratio of favorable outcomes to total outcomes:
+Number of Favorable Outcomes/Total Number of Outcomes=204/504 = 17/42
+
+## Answer
+The probability that, out of the 3 balls drawn, 2 are red and 1 is black, is 17/42.
+
