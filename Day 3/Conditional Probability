@@ -1,11 +1,11 @@
 
-## Problem Statement
+Problem Statement:
 Suppose a family has 2 children, one of which is a boy. What is the probability that both children are boys?
 
-## Solution Approach
+Solution Approach:
 To solve this problem, we need to use conditional probability, specifically the concept of Bayes' theorem.
 
-## Possible Scenarios
+Possible Scenarios:
 Let's denote the children as A and B. There are four possible scenarios for the gender of the two children:
 1. A is a boy, B is a boy (BB)
 2. A is a boy, B is a girl (BG)
@@ -14,13 +14,13 @@ Let's denote the children as A and B. There are four possible scenarios for the 
 
 Given that one child is a boy, we can eliminate scenario 4 (GG). This leaves us with three possible scenarios: BB, BG, and GB.
 
-## Favorable Outcome
+Favorable Outcome:
 We are interested in the probability that both children are boys, which corresponds to scenario 1 (BB).
 
-## Probability Calculation
+Probability Calculation:
 The probability of scenario 1 (BB) occurring among the remaining scenarios (BB, BG, GB) can be calculated as follows:
 Probability of BB= Number of favorable outcomes (BB)/Total remaining outcomes (BB, BG, GB)
 
-## Answer
+Answer:
 By considering the remaining possible scenarios after knowing one child is a boy, the probability that both children are boys is 1/3.
 
