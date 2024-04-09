@@ -1,0 +1,22 @@
+Problem Statement:
+A bag contains 3 red marbles and 4 blue marbles. Then, 2 marbles are drawn from the bag, at random, without replacement. If the first marble drawn is red, what is the probability that the second marble is blue?
+
+Solution Approach:
+To solve this problem, we need to use conditional probability, specifically the concept of Bayes' theorem.
+
+Possible Scenarios:
+Given that the first marble drawn is red, there are two possible scenarios for the second marble:
+The second marble drawn is blue.
+The second marble drawn is red.
+
+Favorable Outcome:
+We are interested in the probability that the second marble drawn is blue.
+
+Probability Calculation:
+The probability of the second marble being blue can be calculated using conditional probability:
+
+Probability of second marble being blue = Number of favorable outcomes (blue second) /Total number of outcomes given red first
+
+Answer:
+By considering the given condition and using conditional probability, the probability that the second marble drawn is blue is 
+4/6 = 2/3.
