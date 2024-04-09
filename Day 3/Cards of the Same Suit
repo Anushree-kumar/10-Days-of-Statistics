@@ -1,0 +1,21 @@
+
+Problem Statement:
+You draw 2 cards from a standard 52-card deck without replacing them. What is the probability that both cards are of the same suit?
+
+Solution Approach:
+To solve this problem, we need to find the probability of drawing two cards of the same suit from the deck.
+
+Total Possible Outcomes:
+The total number of possible outcomes when drawing two cards from a standard 52-card deck without replacement can be calculated using combinations. There are 52×51/2x1=1326 possible combinations.
+
+Favorable Outcomes:
+To draw two cards of the same suit, we need to choose one of the four suits, and then draw two cards of that suit. There are  ways to choose two cards of the same suit from 13 cards, and there are four suits in total. So, the number of favorable outcomes is 4×13×12/2x1=4×78=312.
+
+Probability Calculation:
+The probability of drawing two cards of the same suit is the ratio of favorable outcomes to total outcomes:
+
+Number of Favorable Outcomes/Total Number of Outcomes=312/1326
+=12/51
+​
+Answer:
+The probability that both cards drawn are of the same suit is 12/51.
